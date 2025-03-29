@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Flashcard App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <div class="header-left">
+        <h1>Flashcard App</h1>
+        <!-- Inputs placed under the title -->
+        <div class="form-container">
+          <input type="text" id="term-input" placeholder="Enter term">
+          <input type="text" id="definition-input" placeholder="Enter definition">
+          <input type="text" id="category-input" placeholder="Enter category (optional)">
+          <button id="addBtn">Add Flashcard</button>
+        </div>
+      </div>
+      <div class="header-right">
+        <button id="theme-toggle">⏾ Dark Mode</button>
+        <label for="upload-txt" class="upload-label">Upload a text</label>
+        <input type="file" id="upload-txt" accept=".txt" style="display: none;">
+      </div>
+    </header>
+
+    <!-- Flashcards will go here -->
+    <div class="flashcard-container" id="flashcard-display-container"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
