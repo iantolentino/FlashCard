@@ -2,33 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Flashcard App</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard Studio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="app-container">
-    <header>
-      <div class="header-left">
-        <h1>Flashcard App</h1>
-        <!-- Inputs placed under the title -->
-        <div class="form-container">
-          <input type="text" id="term-input" placeholder="Enter term">
-          <input type="text" id="definition-input" placeholder="Enter definition">
-          <input type="text" id="category-input" placeholder="Enter category (optional)">
-          <button id="addBtn">Add Flashcard</button>
+  <div class="app">
+    <header class="header">
+      <div class="header-top">
+        <h1 class="logo">📚 Flashcard Studio</h1>
+        <div class="header-actions">
+          <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
+            <span class="theme-icon">🌙</span>
+          </button>
+          <div class="upload-wrapper">
+            <label for="upload-txt" class="btn btn-secondary">📤 Import</label>
+            <input type="file" id="upload-txt" accept=".txt" hidden>
+          </div>
         </div>
       </div>
-      <div class="header-right">
-        <button id="theme-toggle">⏾ Dark Mode</button>
-        <label for="upload-txt" class="upload-label">Upload a text</label>
-        <input type="file" id="upload-txt" accept=".txt" style="display: none;">
+      
+      <div class="add-card-form">
+        <input type="text" id="term-input" placeholder="Term" class="form-input">
+        <input type="text" id="definition-input" placeholder="Definition" class="form-input">
+        <input type="text" id="category-input" placeholder="Category (optional)" class="form-input">
+        <button id="addBtn" class="btn btn-primary">+ Add Card</button>
       </div>
     </header>
 
-    <!-- Flashcards will go here -->
-    <div class="flashcard-container" id="flashcard-display-container"></div>
+    <main class="main-content">
+      <div class="stats-bar">
+        <span class="stats-item" id="total-cards">📊 0 cards</span>
+      </div>
+      
+      <div class="flashcard-grid" id="flashcard-display-container"></div>
+    </main>
   </div>
-  <script src="script.js"></script>
+  
+  <script src="js/script.js"></script>
 </body>
 </html>
